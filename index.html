@@ -660,8 +660,8 @@ for i, v in enumerate(nilai):
 def sapa(nama):
     return f"Halo, {nama}! Selamat belajar Python."
 
-print(sapa("Christian"))
-print(sapa("Richard Tanggela"))
+print(sapa("Tasya"))
+print(sapa("Tasya kenigora"))
 
 def luas_pp(p, l):
     return p * l
@@ -688,7 +688,7 @@ def cetak_struk(nama, total):
     print(f"  Total   : Rp{total:,}")
     print("=" * 30)
 
-cetak_struk("Christian", 3500000)</textarea>
+cetak_struk("Tasya", 3500000)</textarea>
         <button class="run-btn" onclick="runCode('t8')">▶ Jalankan Program</button>
       </div>
       <div class="output-label">Output:</div>
@@ -781,102 +781,6 @@ print(f"Hasil: {arr_dinamis}")</textarea>
       </div>
       <div class="output-label">Output:</div>
       <div class="output-box" id="out-t9">Klik "Jalankan Program" untuk melihat hasil...</div>
-    </div>
-  </div>
-</section>
-
-<!-- TUGAS 10 — PRE TEST ARRAY -->
-<section id="t10">
-  <div class="container">
-    <div class="card">
-      <div class="materi-header">
-        <div class="materi-num">T10</div>
-        <div><div class="materi-title">Pre Test — Array</div><div class="materi-sub">Pengertian, dimensi, deklarasi, tipe data, dan macam-macam array</div></div>
-      </div>
-
-      <h4>1. Apa yang dimaksud dengan array?</h4>
-      <p>Array adalah salah satu struktur data yang digunakan untuk menyimpan sekumpulan data dengan tipe data yang sama dalam satu nama variabel. Setiap data dalam array disebut elemen, dan setiap elemen memiliki indeks yang digunakan untuk mengakses atau mengubah nilainya.</p>
-
-      <h4>2. Jelaskan yang dimaksud dengan array 1 dimensi?</h4>
-      <p>Array 1 dimensi adalah array yang elemen-elemennya tersusun dalam satu baris (satu deret) saja, sehingga untuk mengakses setiap elemennya hanya dibutuhkan satu indeks. Contohnya seperti daftar nilai siswa yang disimpan secara berurutan dalam satu baris data.</p>
-
-      <h4>3. Bagaimana cara mendeklarasikan array?</h4>
-      <p>Cara mendeklarasikan array dapat dilakukan dengan menuliskan tipe data, diikuti nama array, lalu ukuran atau isi elemen array tersebut. Contoh penulisan dalam beberapa bahasa pemrograman:</p>
-      <div class="pseudo-box">Python : nilai = [80, 90, 75, 100]
-C      : int nilai[4];
-Java   : int[] nilai = {80, 90, 75, 100};</div>
-
-      <h4>4. Tipe data apa yang digunakan untuk mendeklarasikan array?</h4>
-      <p>Array dapat dideklarasikan menggunakan berbagai tipe data, namun seluruh elemen dalam satu array harus memiliki tipe data yang sama. Beberapa tipe data yang umum digunakan antara lain: <strong>int</strong> (bilangan bulat), <strong>float/double</strong> (bilangan desimal), <strong>char</strong> (karakter), <strong>String</strong> (teks), dan <strong>boolean</strong> (nilai benar/salah).</p>
-
-      <h4>5. Sebutkan macam-macam array yang kamu ketahui!</h4>
-      <ol>
-        <li><strong>Array 1 dimensi</strong> — elemen tersusun dalam satu baris, diakses dengan satu indeks.</li>
-        <li><strong>Array 2 dimensi</strong> — elemen tersusun dalam bentuk baris dan kolom (matriks), diakses dengan dua indeks.</li>
-        <li><strong>Array multidimensi</strong> — array dengan lebih dari dua indeks, biasanya digunakan untuk data yang kompleks.</li>
-        <li><strong>Array statis</strong> — ukuran array sudah ditentukan sejak awal dan tidak dapat diubah.</li>
-        <li><strong>Array dinamis</strong> — ukuran array dapat berubah (bertambah/berkurang) sesuai kebutuhan saat program berjalan.</li>
-      </ol>
-
-      <div class="section-divider"></div>
-      <p><strong>Program Python — Implementasi Jawaban Pre Test:</strong></p>
-      <div class="code-editor">
-        <div class="code-toolbar"><div class="code-dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div><span class="code-lang">Python 3</span></div>
-        <textarea class="code-area" id="code-t10"># Tugas 10 - Pre Test Array
-# Tasya Kenigora - 250403010027 - Kelas B
-
-print("=== 1. PENGERTIAN ARRAY ===")
-print("Array: struktur data untuk menyimpan banyak nilai")
-print("dengan tipe data sama dalam satu nama variabel.\n")
-
-print("=== 2. ARRAY 1 DIMENSI ===")
-nilai = [80, 90, 75, 100]
-print(f"Array 1 dimensi: {nilai}")
-for i in range(len(nilai)):
-    print(f"  nilai[{i}] = {nilai[i]}")
-
-print("\n=== 3. CARA MENDEKLARASIKAN ARRAY (Python) ===")
-buah = ["apel", "mangga", "jeruk"]
-print(f"buah = {buah}")
-
-print("\n=== 4. TIPE DATA UNTUK ARRAY ===")
-arr_int   = [1, 2, 3]
-arr_float = [1.5, 2.5, 3.5]
-arr_char  = ['a', 'b', 'c']
-arr_str   = ["Budi", "Ani", "Sari"]
-arr_bool  = [True, False, True]
-print(f"int     : {arr_int}")
-print(f"float   : {arr_float}")
-print(f"char    : {arr_char}")
-print(f"String  : {arr_str}")
-print(f"boolean : {arr_bool}")
-
-print("\n=== 5. MACAM-MACAM ARRAY ===")
-# Array 1 Dimensi
-arr_1d = [1, 2, 3, 4, 5]
-print(f"1D : {arr_1d}")
-
-# Array 2 Dimensi
-arr_2d = [[1, 2], [3, 4]]
-print(f"2D : {arr_2d}")
-
-# Array Multidimensi
-arr_3d = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]
-print(f"3D : {arr_3d}")
-
-# Array Statis
-arr_statis = [0, 0, 0, 0, 0]
-print(f"Statis  : {arr_statis}")
-
-# Array Dinamis
-arr_dinamis = []
-for i in range(1, 6):
-    arr_dinamis.append(i * 5)
-print(f"Dinamis : {arr_dinamis}")</textarea>
-        <button class="run-btn" onclick="runCode('t10')">▶ Jalankan Program</button>
-      </div>
-      <div class="output-label">Output:</div>
-      <div class="output-box" id="out-t10">Klik "Jalankan Program" untuk melihat hasil...</div>
     </div>
   </div>
 </section>
